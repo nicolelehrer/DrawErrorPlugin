@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DrawErrorController">
+            <connections>
+                <outlet property="window" destination="1" id="15"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="DrawError" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="default" id="1">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="497" y="-140" width="418" height="714"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <view key="contentView" id="2">
+                <rect key="frame" x="0.0" y="0.0" width="418" height="714"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <userGuides>
+                    <userLayoutGuide location="398" affinity="minY"/>
+                    <userLayoutGuide location="651" affinity="minX"/>
+                    <userLayoutGuide location="497" affinity="minX"/>
+                    <userLayoutGuide location="390" affinity="minY"/>
+                    <userLayoutGuide location="497" affinity="minX"/>
+                </userGuides>
+                <subviews>
+                    <tabView id="1387">
+                        <rect key="frame" x="8" y="5" width="403" height="703"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <tabViewItems>
+                            <tabViewItem label="Analysis" identifier="1" id="1388">
+                                <view key="view" id="1391">
+                                    <rect key="frame" x="10" y="33" width="383" height="657"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <slider verticalHuggingPriority="750" id="1126">
+                                            <rect key="frame" x="123" y="465" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1.4139999999999999" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1131">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.errorThreshold" id="1137"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1128">
+                                            <rect key="frame" x="123" y="443" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1.4139999999999999" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1129">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.smallErrorUpperBound" id="1141"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1132">
+                                            <rect key="frame" x="123" y="421" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1.4139999999999999" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1133">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.mediumErrorUpperBound" id="1144"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1134">
+                                            <rect key="frame" x="123" y="401" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1.4099999999999999" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1135">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.largeErrorUpperBound" id="1147"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1091">
+                                            <rect key="frame" x="305" y="471" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1094">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.errorThreshold" id="1097"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1092">
+                                            <rect key="frame" x="46" y="470" width="113" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="errorThreshold:" id="1093">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1114">
+                                            <rect key="frame" x="305" y="448" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1117">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.smallErrorUpperBound" id="1139"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1115">
+                                            <rect key="frame" x="13" y="448" width="113" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="smallErrorUpperBound:" id="1116">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1118">
+                                            <rect key="frame" x="305" y="426" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1121">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.mediumErrorUpperBound" id="1151"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1119">
+                                            <rect key="frame" x="0.0" y="426" width="118" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="mediumErrorUpperBound:" id="1120">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1122">
+                                            <rect key="frame" x="305" y="404" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1125">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.largeErrorUpperBound" id="1149"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1123">
+                                            <rect key="frame" x="10" y="404" width="113" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="largerErrorUpperBound:" id="1124">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1102">
+                                            <rect key="frame" x="305" y="522" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1105">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.angleStep" id="1107"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1103">
+                                            <rect key="frame" x="252" y="525" width="113" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="angleStep:" id="1104">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1108">
+                                            <rect key="frame" x="305" y="543" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1111">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.continuousFactor" id="1113"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1109">
+                                            <rect key="frame" x="220" y="546" width="113" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="continuousFactor:" id="1110">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="692">
+                                            <rect key="frame" x="177" y="339" width="49" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S1" id="693">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="694">
+                                            <rect key="frame" x="264" y="339" width="49" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S2" id="695">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="406">
+                                            <rect key="frame" x="25" y="341" width="95" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="percentagePrimeZ:" id="407">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="422">
+                                            <rect key="frame" x="17" y="312" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxHandTrajErrorX:" id="423">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="690">
+                                            <rect key="frame" x="17" y="291" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxHandTrajErrorY:" id="691">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="37">
+                                            <rect key="frame" x="305" y="312" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="38">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorXE" id="785"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="41">
+                                            <rect key="frame" x="305" y="290" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="42">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorYE" id="783"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="408">
+                                            <rect key="frame" x="128" y="339" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="409">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.S1" id="558"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="480">
+                                            <rect key="frame" x="215" y="339" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="481">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.S2" id="560"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="420">
+                                            <rect key="frame" x="115" y="307" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="421">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorXE" id="779"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="426">
+                                            <rect key="frame" x="115" y="286" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="427">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorYE" id="781"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="696">
+                                            <rect key="frame" x="177" y="249" width="49" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S2" id="717">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="697">
+                                            <rect key="frame" x="264" y="249" width="49" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S3" id="716">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="698">
+                                            <rect key="frame" x="25" y="251" width="95" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="percentagePrimeZ:" id="715">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="699">
+                                            <rect key="frame" x="17" y="225" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxHandTrajErrorX:" id="714">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="700">
+                                            <rect key="frame" x="17" y="200" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxHandTrajErrorY:" id="713">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="701">
+                                            <rect key="frame" x="305" y="225" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="712">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorXM" id="790"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="702">
+                                            <rect key="frame" x="305" y="201" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="711">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorYM" id="800"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="703">
+                                            <rect key="frame" x="128" y="249" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="710">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.S2" id="763"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="704">
+                                            <rect key="frame" x="215" y="249" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="709">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.S3" id="765"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="705">
+                                            <rect key="frame" x="115" y="220" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="708">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorXM" id="787"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="706">
+                                            <rect key="frame" x="115" y="195" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="707">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorYM" id="798"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="718">
+                                            <rect key="frame" x="177" y="157" width="49" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S3" id="739">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="719">
+                                            <rect key="frame" x="264" y="157" width="49" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S4" id="738">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="720">
+                                            <rect key="frame" x="25" y="159" width="95" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="percentagePrimeZ:" id="737">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="721">
+                                            <rect key="frame" x="17" y="135" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxHandTrajErrorX:" id="736">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="722">
+                                            <rect key="frame" x="17" y="109" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxHandTrajErrorY:" id="735">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="723">
+                                            <rect key="frame" x="305" y="135" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="734">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorXM2" id="793"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="724">
+                                            <rect key="frame" x="305" y="111" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="733">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorYM2" id="805"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="725">
+                                            <rect key="frame" x="128" y="157" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="732">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.S3" id="768"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="726">
+                                            <rect key="frame" x="215" y="157" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="731">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.S4" id="771"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="727">
+                                            <rect key="frame" x="115" y="130" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="730">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorXM2" id="801"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="728">
+                                            <rect key="frame" x="115" y="104" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="729">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorYM2" id="803"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="740">
+                                            <rect key="frame" x="177" y="64" width="49" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S4" id="761">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="741">
+                                            <rect key="frame" x="264" y="64" width="49" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="S5" id="760">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="742">
+                                            <rect key="frame" x="25" y="66" width="95" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="percentagePrimeZ:" id="759">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="743">
+                                            <rect key="frame" x="17" y="41" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxHandTrajErrorX:" id="758">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="744">
+                                            <rect key="frame" x="17" y="16" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="maxHandTrajErrorY:" id="757">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="745">
+                                            <rect key="frame" x="305" y="41" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="756">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorXL" id="810"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="746">
+                                            <rect key="frame" x="305" y="18" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="755">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorYL" id="816"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="747">
+                                            <rect key="frame" x="128" y="64" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="754">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.S4" id="773"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="748">
+                                            <rect key="frame" x="215" y="64" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="753">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.S5" id="776"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="749">
+                                            <rect key="frame" x="115" y="36" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="752">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorXL" id="808"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="750">
+                                            <rect key="frame" x="115" y="11" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-1" maxValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="751">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.maxHandTrajErrorYL" id="813"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1295">
+                                            <rect key="frame" x="315" y="342" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="EARLY" id="1296">
+                                                <font key="font" metaFont="miniSystemBold"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1299">
+                                            <rect key="frame" x="315" y="252" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MID" id="1300">
+                                                <font key="font" metaFont="miniSystemBold"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1301">
+                                            <rect key="frame" x="315" y="160" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MID2" id="1302">
+                                                <font key="font" metaFont="miniSystemBold"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1303">
+                                            <rect key="frame" x="315" y="67" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="LATE" id="1304">
+                                                <font key="font" metaFont="miniSystemBold"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="821">
+                                            <rect key="frame" x="51" y="565" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="smallCount:" id="822">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="854">
+                                            <rect key="frame" x="39" y="542" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="mediumCount:" id="855">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="856">
+                                            <rect key="frame" x="53" y="519" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="largeCount:" id="857">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="817">
+                                            <rect key="frame" x="110" y="563" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="818">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.smallCount" id="859"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1087">
+                                            <rect key="frame" x="305" y="565" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1090">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.magnitudeMappingType" id="1099"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1169">
+                                            <rect key="frame" x="110" y="620" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1170">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.task.enableParticleFreeze" id="1386"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1088">
+                                            <rect key="frame" x="187" y="568" width="113" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="magnitudeMappingType:" id="1089">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="850">
+                                            <rect key="frame" x="110" y="540" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="853">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.mediumCount" id="861"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="851">
+                                            <rect key="frame" x="110" y="517" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="852">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.largeCount" id="863"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1157">
+                                            <rect key="frame" x="8" y="622" width="97" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="enableParticleFreeze:" id="1158">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button id="1382">
+                                            <rect key="frame" x="278" y="612" width="119" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="turnGreySpaceOn" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="mini" state="on" imageScaling="proportionallyDown" inset="2" id="1383">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.turnGreySpaceOn" id="1385"/>
+                                            </connections>
+                                        </button>
+                                        <button id="1044">
+                                            <rect key="frame" x="279" y="630" width="119" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="turnAnalysisOn" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="mini" state="on" imageScaling="proportionallyDown" inset="2" id="1045">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.turnAnalysisOn" id="1047"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                            <tabViewItem label="Drawing Settings" identifier="2" id="1389">
+                                <view key="view" id="1390">
+                                    <rect key="frame" x="10" y="33" width="383" height="657"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField verticalHuggingPriority="750" id="1305">
+                                            <rect key="frame" x="9" y="570" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="xDiameterFactorE:" id="1306">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1309">
+                                            <rect key="frame" x="10" y="555" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="yDiameterFactorE:" id="1310">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1311">
+                                            <rect key="frame" x="7" y="523" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="xDiameterFactorM:" id="1314">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1312">
+                                            <rect key="frame" x="8" y="508" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="yDiameterFactorM:" id="1313">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1323">
+                                            <rect key="frame" x="9" y="435" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="xDiameterFactorL:" id="1326">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1324">
+                                            <rect key="frame" x="10" y="420" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="yDiameterFactorL:" id="1325">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1315">
+                                            <rect key="frame" x="1" y="480" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="xDiameterFactorM2:" id="1318">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1316">
+                                            <rect key="frame" x="2" y="465" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="yDiameterFactorM2:" id="1317">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="1230">
+                                            <rect key="frame" x="100" y="565" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-10" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1245">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameterFactorE" id="1263"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1231">
+                                            <rect key="frame" x="100" y="546" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-10" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1244">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameterFactorE" id="1292"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1232">
+                                            <rect key="frame" x="292" y="568" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1243">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameterFactorE" id="1265"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1233">
+                                            <rect key="frame" x="292" y="547" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1242">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameterFactorE" id="1294"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="1234">
+                                            <rect key="frame" x="100" y="520" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-10" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1241">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameterFactorM" id="1267"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1235">
+                                            <rect key="frame" x="100" y="500" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-10" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1240">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameterFactorM" id="1287"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1236">
+                                            <rect key="frame" x="292" y="523" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1239">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameterFactorM" id="1269"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1237">
+                                            <rect key="frame" x="292" y="502" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1238">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameterFactorM2" id="1289"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="1246">
+                                            <rect key="frame" x="101" y="475" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-10" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1261">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameterFactorM2" id="1271"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1247">
+                                            <rect key="frame" x="101" y="456" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-10" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1260">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameterFactorM2" id="1283"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1248">
+                                            <rect key="frame" x="292" y="478" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1259">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameterFactorM2" id="1273"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1249">
+                                            <rect key="frame" x="292" y="457" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1258">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameterFactorM2" id="1285"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="1250">
+                                            <rect key="frame" x="101" y="429" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-10" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1257">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameterFactorL" id="1275"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1251">
+                                            <rect key="frame" x="101" y="411" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="-10" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="1256">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameterFactorL" id="1279"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1252">
+                                            <rect key="frame" x="292" y="433" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1255">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameterFactorL" id="1276"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1253">
+                                            <rect key="frame" x="292" y="412" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1254">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameterFactorL" id="1281"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="946">
+                                            <rect key="frame" x="43" y="179" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="intensityE:" id="947">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1081">
+                                            <rect key="frame" x="39" y="157" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="intensityM:" id="1082">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="831">
+                                            <rect key="frame" x="99" y="619" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="832">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameter" id="837"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="950">
+                                            <rect key="frame" x="100" y="377" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="550" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="951">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radInnerE" id="1003"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1049">
+                                            <rect key="frame" x="101" y="178" width="174" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1" tickMarkPosition="below" sliderType="linear" id="1050">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityE" id="1080"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1051">
+                                            <rect key="frame" x="101" y="155" width="174" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1" tickMarkPosition="below" sliderType="linear" id="1052">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityM" id="1077"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1053">
+                                            <rect key="frame" x="100" y="135" width="174" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1" tickMarkPosition="below" sliderType="linear" id="1054">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityM2" id="1071"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="952">
+                                            <rect key="frame" x="100" y="356" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="550" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="953">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radOuterE" id="1007"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="954">
+                                            <rect key="frame" x="100" y="327" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="550" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="955">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radInnerM" id="1017"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="956">
+                                            <rect key="frame" x="100" y="304" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="550" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="957">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radOuterM" id="1011"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="833">
+                                            <rect key="frame" x="99" y="598" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="10" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="834">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameter" id="841"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="823">
+                                            <rect key="frame" x="39" y="626" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="xDiameter:" id="826">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="958">
+                                            <rect key="frame" x="43" y="384" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="radInnerE:" id="959">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="960">
+                                            <rect key="frame" x="41" y="362" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="radOuterE:" id="961">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="962">
+                                            <rect key="frame" x="41" y="332" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="radInnerM:" id="965">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="963">
+                                            <rect key="frame" x="39" y="309" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="radOuterM:" id="964">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="966">
+                                            <rect key="frame" x="100" y="280" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="550" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="981">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radInnerM2" id="1020"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="967">
+                                            <rect key="frame" x="100" y="256" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="550" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="980">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radOuterM2" id="1013"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="968">
+                                            <rect key="frame" x="99" y="233" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="550" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="979">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radInnerL" id="1024"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="969">
+                                            <rect key="frame" x="99" y="209" width="174" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" minValue="1" maxValue="550" doubleValue="1" tickMarkPosition="below" numberOfTickMarks="10" sliderType="linear" id="978">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radOuterL" id="1015"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="970">
+                                            <rect key="frame" x="36" y="284" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="radInnerM2:" id="977">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="971">
+                                            <rect key="frame" x="33" y="262" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="radOuterM2:" id="976">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="972">
+                                            <rect key="frame" x="43" y="239" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="radInnerL:" id="975">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="973">
+                                            <rect key="frame" x="40" y="214" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="radOuterL:" id="974">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="824">
+                                            <rect key="frame" x="291" y="623" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="825">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.xDiameter" id="839"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="827">
+                                            <rect key="frame" x="39" y="605" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="yDiameter:" id="830">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="828">
+                                            <rect key="frame" x="291" y="602" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="829">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.yDiameter" id="843"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="984">
+                                            <rect key="frame" x="290" y="357" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="989">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radOuterE" id="1009"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1057">
+                                            <rect key="frame" x="290" y="176" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1058">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityE" id="1079"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1059">
+                                            <rect key="frame" x="290" y="154" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1060">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityM" id="1075"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1061">
+                                            <rect key="frame" x="290" y="132" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1062">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityM2" id="1073"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1063">
+                                            <rect key="frame" x="290" y="110" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1064">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityL" id="1069"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="992">
+                                            <rect key="frame" x="290" y="379" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="993">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radInnerE" id="1005"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="985">
+                                            <rect key="frame" x="290" y="332" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="988">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radInnerM" id="1029"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="986">
+                                            <rect key="frame" x="290" y="308" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="987">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radOuterM" id="1031"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="994">
+                                            <rect key="frame" x="290" y="260" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1001">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radOuterM2" id="1033"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="995">
+                                            <rect key="frame" x="290" y="284" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1000">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radInnerM2" id="1022"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="996">
+                                            <rect key="frame" x="289" y="236" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="999">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radInnerL" id="1026"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="997">
+                                            <rect key="frame" x="290" y="212" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="998">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.radOuterL" id="1035"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="1055">
+                                            <rect key="frame" x="100" y="114" width="174" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1" tickMarkPosition="below" sliderType="linear" id="1056">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityL" id="1067"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1083">
+                                            <rect key="frame" x="35" y="135" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="intensityM2:" id="1084">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1085">
+                                            <rect key="frame" x="43" y="115" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="intensityL:" id="1086">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1343">
+                                            <rect key="frame" x="23" y="90" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="intensityEgrey:" id="1366">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1344">
+                                            <rect key="frame" x="21" y="67" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="intensityMgrey:" id="1365">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1345">
+                                            <rect key="frame" x="16" y="44" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="intensityM2grey:" id="1364">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1346">
+                                            <rect key="frame" x="25" y="24" width="103" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="intensityLgrey:" id="1363">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="1347">
+                                            <rect key="frame" x="101" y="86" width="174" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1" doubleValue="0.87037039999999999" tickMarkPosition="below" sliderType="linear" id="1362">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityEgrey" id="1368"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1348">
+                                            <rect key="frame" x="101" y="62" width="174" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" sliderType="linear" id="1361">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityMgrey" id="1372"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1349">
+                                            <rect key="frame" x="290" y="85" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1360">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityEgrey" id="1370"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1350">
+                                            <rect key="frame" x="290" y="63" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1359">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityMgrey" id="1374"/>
+                                            </connections>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" id="1351">
+                                            <rect key="frame" x="101" y="41" width="174" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" sliderType="linear" id="1358">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityM2grey" id="1378"/>
+                                            </connections>
+                                        </slider>
+                                        <slider verticalHuggingPriority="750" id="1352">
+                                            <rect key="frame" x="101" y="20" width="174" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" controlSize="mini" continuous="YES" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="below" sliderType="linear" id="1357">
+                                                <font key="font" metaFont="miniSystem"/>
+                                            </sliderCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityLgrey" id="1380"/>
+                                            </connections>
+                                        </slider>
+                                        <textField verticalHuggingPriority="750" id="1353">
+                                            <rect key="frame" x="290" y="39" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1356">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityM2grey" id="1376"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" id="1354">
+                                            <rect key="frame" x="290" y="18" width="44" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1355">
+                                                <font key="font" metaFont="miniSystem"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="-2" name="value" keyPath="drawError.intensityLgrey" id="1381"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
+                        </tabViewItems>
+                    </tabView>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="initialFirstResponder" destination="2" id="14"/>
+            </connections>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="18"/>
+    </objects>
+</document>
