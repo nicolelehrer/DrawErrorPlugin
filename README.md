@@ -13,3 +13,5 @@ Overview:
 This project functions as part of a larger interactive system that provides audiovisual feedback based on the upper extremity and torso movement performance of a stroke survivor performing a series of functional tasks. This project receives data analysis results from other plugins (not included here) and displays the appropriate feedback.
 
 Trajectory error is visualized following a single reach as red marks that appear to recede into space
+
+![alt text](trajExamples.jpg "untitled portrait")
